@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`binary should work 1`] = `
+Object {
+  "console": "[ 2 ]
+",
+  "playground": Array [
+    Object {
+      "expr": "[Function]",
+      "loc": Object {
+        "column": "2",
+        "line": "7",
+      },
+    },
+    Object {
+      "expr": "[Function]",
+      "loc": Object {
+        "column": "2",
+        "line": "15",
+      },
+    },
+    Object {
+      "expr": "[]",
+      "loc": Object {
+        "column": "16",
+        "line": "19",
+      },
+    },
+    Object {
+      "expr": "[Function]",
+      "loc": Object {
+        "column": "36",
+        "line": "20",
+      },
+    },
+    Object {
+      "expr": "[Function]",
+      "loc": Object {
+        "column": "1",
+        "line": "24",
+      },
+    },
+    Object {
+      "expr": "Reducer(take(filter(map(empty))))",
+      "loc": Object {
+        "column": "10",
+        "line": "31",
+      },
+    },
+    Object {
+      "expr": "[ 2 ]",
+      "loc": Object {
+        "column": "47",
+        "line": "33",
+      },
+    },
+    Object {
+      "expr": "Reducer(take(map(empty)))<, 1,2,3,4>",
+      "loc": Object {
+        "column": "54",
+        "line": "35",
+      },
+    },
+    Object {
+      "expr": "[ 2 ]",
+      "loc": Object {
+        "column": "15",
+        "line": "37",
+      },
+    },
+    Object {
+      "expr": "undefined",
+      "loc": Object {
+        "column": "28",
+        "line": "39",
+      },
+    },
+  ],
+}
+`;

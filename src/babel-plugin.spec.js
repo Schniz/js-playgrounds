@@ -1,4 +1,3 @@
-const babel = require("babel-core");
 const pluginTester = require("babel-plugin-tester");
 const plugin = require("./babel-plugin");
 const prettier = require('prettier')

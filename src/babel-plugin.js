@@ -1,9 +1,10 @@
+const path = require('path')
 module.exports = function(babel) {
   const { types: t } = babel;
 
   const declare = name => {
     let node = t.callExpression(t.identifier("require"), [
-      t.stringLiteral("./playground.js")
+      t.stringLiteral(path.resolve(__dirname, "playground.js"))
     ]);
     node.shouldSkip = true;
     let vd = t.variableDeclarator(t.identifier("var " + name), node);

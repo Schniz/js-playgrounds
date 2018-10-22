@@ -1,5 +1,5 @@
 {
-  "name": "js-playground",
+  "name": "babel-plugin-js-playgrounds",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,8 +7,6 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-tester": "^5.5.1",
-    "jest": "^23.6.0",
-    "lerna": "^3.4.3",
-    "prettier": "^1.14.3"
+    "jest": "^23.6.0"
   }
 }

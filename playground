@@ -1,0 +1,4 @@
+#!/bin/sh
+
+set -e
+babel --plugins ./babel-plugin $1 | node | node parseresult.js

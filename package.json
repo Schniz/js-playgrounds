@@ -1,0 +1,11 @@
+{
+  "name": "js-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {}
+}

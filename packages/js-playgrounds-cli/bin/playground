@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+SCRIPTS_DIRNAME=`dirname $0`
+babel --plugins babel-plugin-js-playgrounds $1 | node | node $SCRIPTS_DIRNAME/parse-js-playgrounds-result.js

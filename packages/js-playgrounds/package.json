@@ -1,0 +1,13 @@
+{
+  "name": "js-playgrounds",
+  "version": "1.0.0",
+  "main": "src/playground.js",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-js-playgrounds": "^1.0.0"
+  }
+}

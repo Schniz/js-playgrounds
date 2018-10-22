@@ -1,5 +1,0 @@
-#!/bin/sh
-
-set -e
-SCRIPTS_DIRNAME=`dirname $0`/../src
-babel --plugins $SCRIPTS_DIRNAME/babel-plugin $1 | node | node $SCRIPTS_DIRNAME/parseresult.js

@@ -24,7 +24,6 @@ module.exports = function(babel) {
     name: "ast-transform", // not required
     pre(f) {
       this.randomName = `playground_fn_${f.scope.generateUid()}`;
-      console.log(this.randomName);
       f.path
         .find(x => x.type == "Program")
         .node.body.unshift(declare(this.randomName));

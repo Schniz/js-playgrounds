@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ast-transform Adds the playground requirement at the top: Adds the playground requirement at the top 1`] = `
+"
+// nothing
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// nothing
+var playground_fn__temp = require(\\"./playground.js\\");
+
+"
+`;
+
+exports[`ast-transform Wraps every expression with the playground call: Wraps every expression with the playground call 1`] = `
+"
+const x = require(\\"x\\");
+const { y } = require(\\"y\\");
+x(y());
+console.log(x);
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+var playground_fn__temp = require(\\"./playground.js\\");
+const x = playground_fn__temp(
+  {
+    line: \\"1\\",
+    column: \\"22\\"
+  },
+  require(\\"x\\")
+);
+const { y } = playground_fn__temp(
+  {
+    line: \\"2\\",
+    column: \\"26\\"
+  },
+  require(\\"y\\")
+);
+playground_fn__temp(
+  {
+    line: \\"3\\",
+    column: \\"6\\"
+  },
+  x(y())
+);
+playground_fn__temp(
+  {
+    line: \\"4\\",
+    column: \\"14\\"
+  },
+  console.log(x)
+);
+
+"
+`;

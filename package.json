@@ -5,6 +5,9 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-tester": "^5.5.1",
+    "jest": "^23.6.0",
     "prettier": "^1.14.3"
   },
   "dependencies": {}

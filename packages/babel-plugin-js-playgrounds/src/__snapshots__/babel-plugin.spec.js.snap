@@ -7,7 +7,7 @@ exports[`ast-transform Adds the playground requirement at the top: Adds the play
       ↓ ↓ ↓ ↓ ↓ ↓
 
 // nothing
-var playground_fn__temp = require(\\"/Users/galsc/Code/js-playground/packages/babel-plugin-js-playgrounds/src/playground.js\\");
+var playground_fn__temp = require(\\"js-playgrounds\\");
 
 "
 `;
@@ -21,7 +21,7 @@ console.log(x);
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var playground_fn__temp = require(\\"/Users/galsc/Code/js-playground/packages/babel-plugin-js-playgrounds/src/playground.js\\");
+var playground_fn__temp = require(\\"js-playgrounds\\");
 const x = playground_fn__temp(
   {
     line: \\"1\\",

@@ -1,6 +1,5 @@
 "use babel";
 
-import AtomJsPlaygroundView from "./atom-js-playground-view";
 import { CompositeDisposable, Point } from "atom";
 import babelPlugin from "babel-plugin-js-playgrounds";
 import { transform } from "@babel/core";
@@ -17,19 +16,10 @@ const unlinkAsync = promisify(unlink);
 const displayMarkerByFile = {};
 
 export default {
-  atomJsPlaygroundView: null,
   modalPanel: null,
   subscriptions: null,
 
   activate(state) {
-    this.atomJsPlaygroundView = new AtomJsPlaygroundView(
-      state.atomJsPlaygroundViewState
-    );
-    this.modalPanel = atom.workspace.addModalPanel({
-      item: this.atomJsPlaygroundView.getElement(),
-      visible: false
-    });
-
     // Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     this.subscriptions = new CompositeDisposable();
 
@@ -37,7 +27,7 @@ export default {
 
     this.subscriptions.add(
       atom.commands.add("atom-workspace", {
-        "atom-js-playground:toggle": () => this.toggle()
+        "js-playground:toggle": () => this.toggle()
       })
     );
   },
@@ -45,12 +35,11 @@ export default {
   deactivate() {
     this.modalPanel.destroy();
     this.subscriptions.dispose();
-    this.atomJsPlaygroundView.destroy();
+    Object.keys(displayMarkerByFile).forEach(file => this.removeAllMarkers(file));
   },
 
   serialize() {
     return {
-      atomJsPlaygroundViewState: this.atomJsPlaygroundView.serialize()
     };
   },
 

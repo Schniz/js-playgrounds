@@ -27,3 +27,7 @@ I will accept PRs from others, of course:
 - [ ] CodeSandbox integration (if VSCode isn't enough for that)
 - [ ] Reason file support using BuckleScript
 - [ ] Ruby? Python?
+
+## Development
+
+This repo uses Yarn Workspaces, so install `yarn`, and every library we use should hoist to the root of the repo :smile_cat:

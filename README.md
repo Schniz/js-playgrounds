@@ -16,3 +16,14 @@ Eventually, I think the repo could be changed to plain "playgrounds": I want to 
 - [`packages/babel-plugin-js-playgrounds`](packages/babel-plugin-js-playgrounds) - Babel plugin that adds the functionality.
 - [`packages/js-playgrounds-cli`](packages/js-playgrounds-cli) - A CLI version of the above
 - [`packages/js-playgrounds`](packages/js-playgrounds) - The small library that the Babel plugin adds to report stuff.
+
+## Things I hope to do in the future
+
+I will accept PRs from others, of course:
+
+- [ ] Vim plugin
+- [x] Atom plugin
+- [ ] VSCode plugin
+- [ ] CodeSandbox integration (if VSCode isn't enough for that)
+- [ ] Reason file support using BuckleScript
+- [ ] Ruby? Python?

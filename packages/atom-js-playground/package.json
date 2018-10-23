@@ -1,0 +1,19 @@
+{
+  "name": "atom-js-playground",
+  "main": "./lib/atom-js-playground",
+  "version": "1.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "atom-js-playground:toggle"
+  },
+  "repository": "https://github.com/atom/atom-js-playground",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-plugin-js-playgrounds": "*"
+  }
+}

@@ -8,6 +8,7 @@ import { writeFile, unlink } from "fs";
 import { basename, dirname, resolve } from "path";
 import { promisify } from "util";
 import parsePlaygroundResult from "js-playgrounds/src/parseResult";
+import debounce from "debounce";
 
 const asyncExec = promisify(exec);
 const writeFileAsync = promisify(writeFile);
@@ -16,7 +17,6 @@ const unlinkAsync = promisify(unlink);
 const displayMarkerByFile = {};
 
 export default {
-  modalPanel: null,
   subscriptions: null,
 
   activate(state) {
@@ -33,19 +33,18 @@ export default {
   },
 
   deactivate() {
-    this.modalPanel.destroy();
     this.subscriptions.dispose();
-    Object.keys(displayMarkerByFile).forEach(file => this.removeAllMarkers(file));
+    Object.keys(displayMarkerByFile).forEach(file =>
+      this.removeAllMarkers(file)
+    );
   },
 
   serialize() {
-    return {
-    };
+    return {};
   },
 
   removeAllMarkers(file) {
     if (displayMarkerByFile[file]) {
-      console.log("Removing all markers");
       displayMarkerByFile[file].forEach(marker => marker.destroy());
       displayMarkerByFile[file] = [];
     }
@@ -53,7 +52,7 @@ export default {
 
   toggle() {
     atom.workspace.observeTextEditors(editor => {
-      editor.onDidStopChanging(async ({ changes }) => {
+      const redraw = async () => {
         const originalPath = editor.getPath();
         const newPath = resolve(
           dirname(originalPath),
@@ -98,7 +97,10 @@ export default {
             console.error("Error deleting file", e);
           }
         }
-      });
+      };
+
+      editor.onDidStopChanging(debounce(redraw, 200));
+      redraw();
     });
     console.log("AtomJsPlayground was toggled!");
   }

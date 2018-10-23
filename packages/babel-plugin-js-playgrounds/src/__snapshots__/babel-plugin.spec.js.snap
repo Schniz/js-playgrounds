@@ -12,6 +12,42 @@ var playground_fn__temp = require(\\"js-playgrounds\\");
 "
 `;
 
+exports[`ast-transform Works with newer language features: Works with newer language features 1`] = `
+"
+import x from 'wat';
+import {y} from 'yo';
+
+const f = async () => {
+  let wat = await Promise.resolve(\\"hello\\")
+  return wat
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+var playground_fn__temp = require(\\"js-playgrounds\\");
+import x from \\"wat\\";
+import { y } from \\"yo\\";
+
+const f = playground_fn__temp(
+  {
+    line: \\"7\\",
+    column: \\"1\\"
+  },
+  async () => {
+    let wat = playground_fn__temp(
+      {
+        line: \\"5\\",
+        column: \\"42\\"
+      },
+      await Promise.resolve(\\"hello\\")
+    );
+    return wat;
+  }
+);
+
+"
+`;
+
 exports[`ast-transform Wraps every expression with the playground call: Wraps every expression with the playground call 1`] = `
 "
 const x = require(\\"x\\");

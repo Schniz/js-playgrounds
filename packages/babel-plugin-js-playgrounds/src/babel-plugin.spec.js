@@ -12,6 +12,15 @@ pluginTester({
       const { y } = require("y");
       x(y());
       console.log(x);
+    `,
+    "Works with newer language features": `
+      import x from 'wat';
+      import {y} from 'yo';
+
+      const f = async () => {
+        let wat = await Promise.resolve("hello")
+        return wat
+      }
     `
   },
   formatResult: result => {

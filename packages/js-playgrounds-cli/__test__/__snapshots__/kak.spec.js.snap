@@ -8,71 +8,131 @@ Object {
     Object {
       "expr": "[Function]",
       "loc": Object {
-        "column": "2",
-        "line": "7",
+        "end": Object {
+          "column": "2",
+          "line": "7",
+        },
+        "start": Object {
+          "column": "16",
+          "line": "1",
+        },
       },
     },
     Object {
       "expr": "[Function]",
       "loc": Object {
-        "column": "2",
-        "line": "15",
+        "end": Object {
+          "column": "2",
+          "line": "15",
+        },
+        "start": Object {
+          "column": "20",
+          "line": "9",
+        },
       },
     },
     Object {
       "expr": "[]",
       "loc": Object {
-        "column": "16",
-        "line": "19",
+        "end": Object {
+          "column": "16",
+          "line": "19",
+        },
+        "start": Object {
+          "column": "0",
+          "line": "19",
+        },
       },
     },
     Object {
       "expr": "[Function]",
       "loc": Object {
-        "column": "36",
-        "line": "20",
+        "end": Object {
+          "column": "36",
+          "line": "20",
+        },
+        "start": Object {
+          "column": "0",
+          "line": "20",
+        },
       },
     },
     Object {
       "expr": "[Function]",
       "loc": Object {
-        "column": "1",
-        "line": "24",
+        "end": Object {
+          "column": "1",
+          "line": "24",
+        },
+        "start": Object {
+          "column": "14",
+          "line": "22",
+        },
       },
     },
     Object {
       "expr": "Reducer(take(filter(map(empty))))",
       "loc": Object {
-        "column": "10",
-        "line": "31",
+        "end": Object {
+          "column": "10",
+          "line": "31",
+        },
+        "start": Object {
+          "column": "16",
+          "line": "28",
+        },
       },
     },
     Object {
       "expr": "[ 2 ]",
       "loc": Object {
-        "column": "47",
-        "line": "33",
+        "end": Object {
+          "column": "47",
+          "line": "33",
+        },
+        "start": Object {
+          "column": "15",
+          "line": "33",
+        },
       },
     },
     Object {
       "expr": "Reducer(take(map(empty)))<, 1,2,3,4>",
       "loc": Object {
-        "column": "54",
-        "line": "35",
+        "end": Object {
+          "column": "54",
+          "line": "35",
+        },
+        "start": Object {
+          "column": "14",
+          "line": "35",
+        },
       },
     },
     Object {
       "expr": "[ 2 ]",
       "loc": Object {
-        "column": "15",
-        "line": "37",
+        "end": Object {
+          "column": "15",
+          "line": "37",
+        },
+        "start": Object {
+          "column": "0",
+          "line": "37",
+        },
       },
     },
     Object {
       "expr": "undefined",
       "loc": Object {
-        "column": "28",
-        "line": "39",
+        "end": Object {
+          "column": "28",
+          "line": "39",
+        },
+        "start": Object {
+          "column": "0",
+          "line": "39",
+        },
       },
     },
   ],

@@ -3,10 +3,7 @@ const { inspect } = require("util");
 const exprs = [];
 
 process.on("exit", () => {
-  const results = JSON.stringify(exprs, null, 2).replace(
-    /^/gm,
-    "@PLAYGROUND: "
-  );
+  const results = JSON.stringify(exprs).replace(/^/gm, "@PLAYGROUND: ");
   console.log(results);
 });
 

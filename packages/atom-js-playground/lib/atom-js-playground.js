@@ -1,13 +1,13 @@
 "use babel";
 
 import { CompositeDisposable, Point } from "atom";
-import babelPlugin from "babel-plugin-js-playgrounds";
+import babelPlugin from "@js-playgrounds/babel-plugin";
 import { transform } from "@babel/core";
 import { exec } from "child_process";
 import { writeFile, unlink } from "fs";
 import { basename, dirname, resolve } from "path";
 import { promisify } from "util";
-import parsePlaygroundResult from "js-playgrounds/src/parseResult";
+import parsePlaygroundResult from "@js-playgrounds/js-playgrounds/src/parseResult";
 import debounce from "debounce";
 
 const asyncExec = promisify(exec);

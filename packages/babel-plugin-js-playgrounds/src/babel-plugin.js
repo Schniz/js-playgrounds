@@ -9,7 +9,7 @@ module.exports = function(babel) {
 
   const declare = name => {
     let node = t.callExpression(t.identifier("require"), [
-      t.stringLiteral("js-playgrounds")
+      t.stringLiteral("@js-playgrounds/js-playgrounds")
     ]);
     node.shouldSkip = true;
     let vd = t.variableDeclarator(t.identifier("var " + name), node);

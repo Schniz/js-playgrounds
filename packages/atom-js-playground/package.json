@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
-    "babel-plugin-js-playgrounds": "*",
+    "@js-playgrounds/babel-plugin": "*",
     "debounce": "^1.2.0"
   }
 }

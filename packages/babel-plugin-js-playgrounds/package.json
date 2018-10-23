@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-js-playgrounds",
+  "name": "@js-playgrounds/babel-plugin",
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",

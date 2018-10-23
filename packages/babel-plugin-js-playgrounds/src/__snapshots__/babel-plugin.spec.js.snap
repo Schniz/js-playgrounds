@@ -7,7 +7,7 @@ exports[`ast-transform Adds the playground requirement at the top: Adds the play
       ↓ ↓ ↓ ↓ ↓ ↓
 
 // nothing
-var playground_fn__temp = require(\\"js-playgrounds\\");
+var playground_fn__temp = require(\\"@js-playgrounds/js-playgrounds\\");
 
 "
 `;
@@ -24,7 +24,7 @@ const f = async () => {
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var playground_fn__temp = require(\\"js-playgrounds\\");
+var playground_fn__temp = require(\\"@js-playgrounds/js-playgrounds\\");
 import x from \\"wat\\";
 import { y } from \\"yo\\";
 
@@ -69,7 +69,7 @@ console.log(x);
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-var playground_fn__temp = require(\\"js-playgrounds\\");
+var playground_fn__temp = require(\\"@js-playgrounds/js-playgrounds\\");
 const x = playground_fn__temp(
   {
     start: {

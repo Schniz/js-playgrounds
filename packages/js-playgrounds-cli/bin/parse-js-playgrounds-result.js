@@ -1,4 +1,4 @@
-const parseResult = require("js-playgrounds/src/parseResult");
+const parseResult = require("@js-playgrounds/js-playgrounds/src/parseResult");
 
 let str = "";
 

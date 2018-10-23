@@ -1,6 +1,6 @@
 const pluginTester = require("babel-plugin-tester");
 const plugin = require("./babel-plugin");
-const prettier = require('prettier')
+const prettier = require("prettier");
 
 pluginTester({
   plugin,
@@ -15,6 +15,6 @@ pluginTester({
     `
   },
   formatResult: result => {
-    return prettier.format(result, { parser: 'babylon' })
+    return prettier.format(result, { parser: "babylon" });
   }
 });

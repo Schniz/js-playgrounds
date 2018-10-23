@@ -1,7 +1,6 @@
 # JS Playgrounds
 
-> Like Swift playgrounds, only for JS, and for every editor!
-> (experimental stuff over here)
+> Experimental editor agnostic in-line evaluation: like Swift playgrounds, only for JS!
 
 ![Demo in Atom Editor](./demo-atom.gif)
 

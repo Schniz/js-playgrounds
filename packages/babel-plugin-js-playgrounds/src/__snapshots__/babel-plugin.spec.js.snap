@@ -30,14 +30,26 @@ import { y } from \\"yo\\";
 
 const f = playground_fn__temp(
   {
-    line: \\"7\\",
-    column: \\"1\\"
+    start: {
+      line: \\"4\\",
+      column: \\"10\\"
+    },
+    end: {
+      line: \\"7\\",
+      column: \\"1\\"
+    }
   },
   async () => {
     let wat = playground_fn__temp(
       {
-        line: \\"5\\",
-        column: \\"42\\"
+        start: {
+          line: \\"5\\",
+          column: \\"12\\"
+        },
+        end: {
+          line: \\"5\\",
+          column: \\"42\\"
+        }
       },
       await Promise.resolve(\\"hello\\")
     );
@@ -60,29 +72,53 @@ console.log(x);
 var playground_fn__temp = require(\\"js-playgrounds\\");
 const x = playground_fn__temp(
   {
-    line: \\"1\\",
-    column: \\"22\\"
+    start: {
+      line: \\"1\\",
+      column: \\"10\\"
+    },
+    end: {
+      line: \\"1\\",
+      column: \\"22\\"
+    }
   },
   require(\\"x\\")
 );
 const { y } = playground_fn__temp(
   {
-    line: \\"2\\",
-    column: \\"26\\"
+    start: {
+      line: \\"2\\",
+      column: \\"14\\"
+    },
+    end: {
+      line: \\"2\\",
+      column: \\"26\\"
+    }
   },
   require(\\"y\\")
 );
 playground_fn__temp(
   {
-    line: \\"3\\",
-    column: \\"6\\"
+    start: {
+      line: \\"3\\",
+      column: \\"0\\"
+    },
+    end: {
+      line: \\"3\\",
+      column: \\"6\\"
+    }
   },
   x(y())
 );
 playground_fn__temp(
   {
-    line: \\"4\\",
-    column: \\"14\\"
+    start: {
+      line: \\"4\\",
+      column: \\"0\\"
+    },
+    end: {
+      line: \\"4\\",
+      column: \\"14\\"
+    }
   },
   console.log(x)
 );
